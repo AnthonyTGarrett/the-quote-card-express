@@ -1,0 +1,171 @@
+@import url(reset.css);
+
+.background-img {
+  background-image: radial-gradient(
+      circle,
+      rgba(153, 153, 153, 0.8) 0%,
+      rgba(50, 50, 50, 0.9) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    ),
+    url(../img/buddha.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+main.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+article.quote-container {
+  z-index: 5;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  width: 95%;
+  height: 95%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+q:before {
+  position: absolute;
+  font-size: 4em;
+  line-height: 1;
+  top: 27%;
+  left: 5%;
+  content: '\201C';
+  display: none;
+}
+
+q:after {
+  position: absolute;
+  font-size: 4em;
+  line-height: 1;
+  top: 60%;
+  left: 80%;
+  content: '\201D';
+  display: none;
+}
+
+#quote {
+  width: 80%;
+}
+
+#author {
+  font-size: 2.1rem;
+  margin-top: 1.8rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  article.quote-container {
+    font-size: 3rem;
+  }
+  #quote {
+    width: 60%;
+  }
+
+  q:before {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 23%;
+    left: 13%;
+    content: '\201C';
+    display: block;
+  }
+
+  q:after {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 60%;
+    left: 75%;
+    content: '\201D';
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #quote {
+    width: 40%;
+  }
+
+  q:before {
+    position: absolute;
+    font-size: 3em;
+    line-height: 1;
+    top: 18%;
+    left: 25%;
+    content: '\201C';
+  }
+
+  q:after {
+    position: absolute;
+    font-size: 3em;
+    line-height: 1;
+    top: 67%;
+    left: 68%;
+    content: '\201D';
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #quote {
+    width: 40%;
+  }
+
+  q:before {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 24%;
+    left: 24%;
+    content: '\201C';
+  }
+
+  q:after {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 60%;
+    left: 68%;
+    content: '\201D';
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #quote {
+    width: 40%;
+  }
+
+  q:before {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 35%;
+    left: 27%;
+    content: '\201C';
+  }
+
+  q:after {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 55%;
+    left: 68%;
+    content: '\201D';
+  }
+}
