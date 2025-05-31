@@ -168,4 +168,8 @@ q:after {
     left: 68%;
     content: '\201D';
   }
+
+  article.quote-container {
+    font-size: 3.6rem;
+  }
 }
