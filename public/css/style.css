@@ -9,6 +9,7 @@
     ),
     url(../img/buddha.jpg);
   position: absolute;
+  background-size: cover;
   top: 0;
   left: 0;
   right: 0;

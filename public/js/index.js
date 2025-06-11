@@ -38,19 +38,17 @@ function loopThroughQuotes() {
   }, 3000);
 }
 
-setTimeout(loopThroughQuotes, 3000);
+loopThroughQuotes();
 
 async function getRandomImage() {
-  const client_id = 'ms06Eh8ePLv25510kmne9ENx9AwzexVsQclRKKwmkfc';
-  const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+  const endpoint = `http://localhost:8080/api/v1/getRandomImage`;
   try {
     const response = await fetch(endpoint);
     const returnedData = await response.json();
-    const receivedPhotoUrl = returnedData.urls.regular;
+    const receivedPhotoUrl = returnedData.data;
 
     const imgDiv = document.querySelector('.background-img');
     imgDiv.style.backgroundImage = `url(${receivedPhotoUrl})`;
-    imgDiv.style.backgroundSize = 'cover';
   } catch (error) {
     console.error(error);
   }
